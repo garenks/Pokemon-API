@@ -1,7 +1,7 @@
 const container = document.getElementById("cards-container");
 
 // Buscar lista de Pokémon
-fetch("https://pokeapi.co/api/v2/pokemon?limit=20")
+fetch("https://pokeapi.co/api/v2/pokemon?limit=54")
     .then(response => response.json())
     .then(data => {
         data.results.forEach(pokemon => {

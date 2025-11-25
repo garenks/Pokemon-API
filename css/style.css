@@ -11,10 +11,24 @@ body {
     padding: 20px;
 }
 
+
 .card img {
     width: 150px;
     height: 150px;
+    position: relative;
 }
+
+.favorite {
+    position:absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+
 
 .card{
     background-color: #839cbe;
