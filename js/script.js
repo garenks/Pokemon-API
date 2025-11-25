@@ -15,6 +15,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=54")
                     const card = document.createElement("div");
                     card.classList.add("card");
 
+                    // Criação do botão de favorito e sua funcionalidade
                     const fav = document.createElement("div");
                     fav.classList.add("favorite");
                     fav.innerHTML = "♡";

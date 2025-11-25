@@ -1,8 +1,11 @@
+
+/* Estilo do corpo ao todo */
 body {
     font-family: arial, sans-serif;
     text-align: center;
 }
 
+/* Container com organização dos cards */
 #cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -11,28 +14,40 @@ body {
     padding: 20px;
 }
 
+/* Estilização dos cards */
+.card {
+    background-color: #839cbe;
+    border-radius: 12px;
+    width: 200px;
+    box-shadow: 0 0 15px #00000055;
+    position: relative; 
+    padding: 10px 0 15px 0;
+}
 
+/* Estilização das imagens dos cards */
 .card img {
     width: 150px;
     height: 150px;
-    position: relative;
 }
 
+
+/* ícone de favorito */
 .favorite {
-    position:absolute;
-    right: 10px;
+    position: absolute;
     top: 8px;
-    font-size: 22px;
+    right: 10px;
+    font-size: 24px;
     cursor: pointer;
     user-select: none;
     transition: transform 0.2s;
 }
 
+/* Animação ícone ao passar o mouse */
+.favorite:hover {
+    transform: scale(1.2);
+}
 
-
-.card{
-    background-color: #839cbe;
-    border-radius: 12px;
-    width: 200px;
-    box-shadow: 0 0 15px #00000055;
+/* ícone marcado como favorito */
+.favorite.active {
+    color: red;
 }
