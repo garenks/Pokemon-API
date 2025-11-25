@@ -15,6 +15,16 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=54")
                     const card = document.createElement("div");
                     card.classList.add("card");
 
+                    const fav = document.createElement("div");
+                    fav.classList.add("favorite");
+                    fav.innerHTML = "♡";
+
+                    fav.addEventListener("click", () => {
+                        fav.classList.toggle("Active");
+                        fav.innerHTML = fav.classList.contains("Active") ? "♥" : "♡";
+                    });
+
+
                     const img = document.createElement("img");
                     img.src = details.sprites.front_default;
 
@@ -24,6 +34,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=54")
                     const type = document.createElement("p");
                     type.innerText = "Tipo: " + details.types[0].type.name;
 
+                    card.appendChild(fav);
                     card.appendChild(img);
                     card.appendChild(name);
                     card.appendChild(type);
